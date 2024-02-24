@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${user.getNickname()}"></title>
+</head>
+<body>
+<h3>Пользователь - <span class="fst-italic" th:text="${user.getNickname()}">nickname</span>.</h3>
+<p><strong>Id:</strong> <span class="fst-italic" th:text="${user.getId()}">id</span>.<p>
+<p><strong>Никнейм:</strong> <span class="fst-italic" th:text="${user.getNickname()}">nickname</span>.</p>
+<p><strong>Имя:</strong> <span class="fst-italic" th:text="${user.getName()}">name</span>.</p>
+<p><strong>Возраст:</strong> <span class="fst-italic" th:text="${user.getAge()}">age</span>.</p>
+<p><strong>Пол:</strong> <span class="fst-italic" th:text="${user.getGender()}">gender</span>.</p>
+<h3>Возможности пользователя:</h3>
+<h4><a th:href="@{/api/v1/meetings/users/{id}/edit(id=${user.getId()})}">Редактировать профиль.</a></h4>
+<form th:method="DELETE" th:action="@{/api/v1/meetings/users/{id}(id=${user.getId()})}">
+    <input type="submit" value="Удалить профиль.">
+</form>
+<hr/>
+<a href="/api/v1/meetings/users">Вернуться к списку всех пользователей.</a>
+</body>
+</html>

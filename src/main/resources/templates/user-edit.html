@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>edit-user</title>
+</head>
+<body>
+<form th:method="PATCH" th:action="@{/api/v1/meetings/users/{id}(id=${user.getId()})}" th:object="${user}">
+    <label for="nickname">Измените никнейм:</label>
+        <input name="nickname" type="text" th:field="*{nickname}" id="nickname">
+    <div style="color:red" th:if="${#fields.hasErrors('nickname')}" th:errors="*{nickname}">Nickname Error</div>
+    <div style="margin-top: 5px;">
+    <label for="name">Измените имя:</label>
+    <input name="nickname" type="text" th:field="*{name}" id="name">
+        <div style="color:red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</div>
+    </div>
+    <input name="nickname" type="hidden" th:field="*{age}" id="age">
+    <input name="nickname" type="hidden" th:field="*{gender}" id="gender">
+    <div style="margin-top: 5px;">
+    <input type="submit" value="Подтвердить.">
+    </div>
+</form>
+<hr/>
+<a th:href="@{/api/v1/meetings/users/{id}(id=${user.getId()})}">Вернуться к профилю без изменений.</a>
+<div style="margin-top: 5px;">
+<a href="/api/v1/meetings/users">Вернуться к списку всех пользователей.</a>
+</div>
+</body>
+</html>
+

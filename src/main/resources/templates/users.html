@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>all-users</title>
+</head>
+<body>
+<h3>Список всех пользователей:</h3>
+<div th:each="user : ${users}">
+    <a th:href="@{/api/v1/meetings/users/{id}(id=${user.getId()})}"
+       th:text="${'Имя: ' +user.getName() + ', возраст: ' + user.getAge() + '.'}">
+        user
+    </a>
+</div>
+<hr/>
+<a href="users/save">Зарегистрировать нового пользователя.</a>
+</body>
+</html>
