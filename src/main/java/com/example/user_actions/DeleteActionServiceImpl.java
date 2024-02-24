@@ -4,7 +4,7 @@ import com.example.dao.Dao;
 import com.example.input.Input;
 
 /** Класс, отвечающий за действие удаления пользователя. */
-public class DeleteAction implements UserAction {
+public class DeleteActionServiceImpl implements UserActionService {
 
     @Override
     public String name() {

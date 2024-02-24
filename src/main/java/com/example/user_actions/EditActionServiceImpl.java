@@ -4,7 +4,7 @@ import com.example.dao.Dao;
 import com.example.input.Input;
 
 /** Класс, отвечающий за действие изменения никнейма пользователя. */
-public class EditAction implements UserAction {
+public class EditActionServiceImpl implements UserActionService {
 
     @Override
     public String name() {

@@ -4,7 +4,7 @@ import com.example.dao.Dao;
 import com.example.input.Input;
 
 /** Класс, отвечающий за действие вывода всех пользователей в консоль. */
-public class ShowAllUsersAction implements UserAction {
+public class ShowAllUsersActionServiceImpl implements UserActionService {
 
     @Override
     public String name() {

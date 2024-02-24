@@ -1,7 +1,6 @@
 package com.example.dao;
 
 import com.example.models.User;
-
 import java.util.ArrayList;
 import java.util.List;
 

@@ -3,8 +3,8 @@ package com.example.user_actions;
 import com.example.dao.Dao;
 import com.example.input.Input;
 
-/** Класс, отвечающий за выход из приложеня - прекращение работы программы. */
-public class ExitAction implements UserAction {
+/** Класс, отвечающий за выход из приложения - прекращение работы программы. */
+public class ExitActionServiceImpl implements UserActionService {
 
     @Override
     public String name() {

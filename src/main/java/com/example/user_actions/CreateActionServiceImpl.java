@@ -4,9 +4,8 @@ import com.example.dao.Dao;
 import com.example.input.Input;
 import com.example.models.User;
 
-
 /** Класс, отвечающий за действие создания нового пользователя. */
-public class CreateAction implements UserAction {
+public class CreateActionServiceImpl implements UserActionService {
 
     /** Переменная для присвоения пользователю уникального ID. */
     private static int ID;

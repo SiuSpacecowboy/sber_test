@@ -6,7 +6,7 @@ import com.example.input.Input;
 /**
  Интерфейс для создания объектов действий пользователя.
  */
-public interface UserAction {
+public interface UserActionService {
 
     /**
      * Получение имя действия пользователя.

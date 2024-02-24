@@ -10,13 +10,13 @@ import org.junit.Test;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.*;
 
-public class UserActionTest {
+public class UserActionServiceTest {
 
     @Test
     public void CreateActionSuccessTest() throws InterruptedException {
         Dao dao = mock(UserDao.class);
         Input input = mock(Input.class);
-        UserAction action = new CreateAction();
+        UserActionService action = new CreateActionServiceImpl();
         when(input.askInt("Enter age: ")).thenReturn(20);
         when(input.askStr("Enter nickname: ")).thenReturn("Max");
         when(input.askStr("Select your gender, F if female, M if male: ")).thenReturn("M");
@@ -29,7 +29,7 @@ public class UserActionTest {
     public void CreateActionAgeBellow18Test() throws InterruptedException {
         Dao dao = mock(UserDao.class);
         Input input = mock(Input.class);
-        UserAction action = new CreateAction();
+        UserActionService action = new CreateActionServiceImpl();
         when(input.askInt("Enter age: ")).thenReturn(16);
         boolean result = action.execute(input, dao);
         assertTrue(result);
@@ -40,7 +40,7 @@ public class UserActionTest {
     public void DeleteActionTest() throws InterruptedException {
         Dao dao = mock(UserDaoForTests.class);
         Input input = mock(Input.class);
-        UserAction action = new DeleteAction();
+        UserActionService action = new DeleteActionServiceImpl();
         when(input.askInt("Enter id: ")).thenReturn(1);
         boolean result = action.execute(input, dao);
         assertTrue(result);
@@ -52,7 +52,7 @@ public class UserActionTest {
     public void EditActionTest() throws InterruptedException {
         Dao dao = mock(UserDaoForTests.class);
         Input input = mock(Input.class);
-        UserAction action = new EditAction();
+        UserActionService action = new EditActionServiceImpl();
         when(input.askInt("Enter id: ")).thenReturn(1);
         when(input.askStr("Enter new nickname: ")).thenReturn("John");
         boolean result = action.execute(input, dao);
@@ -66,7 +66,7 @@ public class UserActionTest {
     public void FindByIdActionTest() throws InterruptedException {
         Dao dao = mock(UserDaoForTests.class);
         Input input = mock(Input.class);
-        UserAction action = new FindByIdAction();
+        UserActionService action = new FindByIdActionServiceImpl();
         when(input.askInt("Enter id: ")).thenReturn(1);
         boolean result = action.execute(input, dao);
         assertTrue(result);

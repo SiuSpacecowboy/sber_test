@@ -5,13 +5,12 @@ import com.example.input.Input;
 import com.example.models.User;
 
 /** Класс, отвечающий за действие поиска пользователя по его ID. */
-public class FindByIdAction implements UserAction {
+public class FindByIdActionServiceImpl implements UserActionService {
 
     @Override
     public String name() {
         return "Find user by id";
     }
-
 
     @Override
     public boolean execute(Input input, Dao dao) throws InterruptedException {
