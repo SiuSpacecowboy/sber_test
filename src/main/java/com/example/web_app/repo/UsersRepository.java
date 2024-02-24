@@ -1,6 +1,6 @@
-package com.example.web.repo;
+package com.example.web_app.repo;
 
-import com.example.web.dto.User;
+import com.example.web_app.dto.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

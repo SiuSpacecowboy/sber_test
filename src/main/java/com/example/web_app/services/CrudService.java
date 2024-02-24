@@ -1,6 +1,6 @@
-package com.example.web.services;
+package com.example.web_app.services;
 
-import com.example.web.dto.User;
+import com.example.web_app.dto.User;
 import java.util.List;
 import java.util.NoSuchElementException;
 

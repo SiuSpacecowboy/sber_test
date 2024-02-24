@@ -1,8 +1,8 @@
-package com.example.web.controllers;
+package com.example.web_app.controllers;
 
-import com.example.web.dto.User;
-import com.example.web.services.CrudService;
-import com.example.web.services.UserCrudServiceImpl;
+import com.example.web_app.dto.User;
+import com.example.web_app.services.CrudService;
+import com.example.web_app.services.UserCrudServiceImpl;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

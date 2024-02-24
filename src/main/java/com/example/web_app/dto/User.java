@@ -1,4 +1,4 @@
-package com.example.web.dto;
+package com.example.web_app.dto;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;

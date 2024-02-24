@@ -1,7 +1,7 @@
-package com.example.web.services;
+package com.example.web_app.services;
 
-import com.example.web.dto.User;
-import com.example.web.repo.UsersRepository;
+import com.example.web_app.dto.User;
+import com.example.web_app.repo.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
