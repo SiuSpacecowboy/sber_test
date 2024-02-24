@@ -1,9 +1,10 @@
-package com.example;
+package com.example.ui;
 
 import com.example.dao.Dao;
 import com.example.input.Input;
-import com.example.user_actions.UserAction;
+import com.example.user_actions.UserActionService;
 import java.util.List;
+import java.util.stream.IntStream;
 
 /** Класс, имитирующий пользовательский интерфейс. */
 public class StartUi {
@@ -14,7 +15,7 @@ public class StartUi {
      * @param dao Объект Dao для доступа к данным.
      * @param actions Список возможных действий, с которыми может работать пользователь.
      * */
-    public void init(Input input, Dao dao, List<UserAction> actions) throws InterruptedException {
+    public void init(Input input, Dao dao, List<UserActionService> actions) throws InterruptedException {
         boolean run = true;
         while (run) {
             showMenu(actions);
@@ -24,16 +25,15 @@ public class StartUi {
                 Thread.sleep(500);
                 continue;
             }
-            UserAction action = actions.get(select - 1);
+            UserActionService action = actions.get(select - 1);
             run = action.execute(input, dao);
         }
     }
 
     /** Метод для отображения возможностей пользователя. */
-    private void showMenu(List<UserAction> actions) {
+    private void showMenu(List<UserActionService> actions) {
         System.out.println("Menu:");
-        for (int index = 0; index < actions.size(); index++) {
-            System.out.println(index + 1 + ". " + actions.get(index).name());
-        }
+        IntStream.rangeClosed(0, actions.size() - 1)
+                .forEach(v ->  System.out.println(v + 1 + ". " + actions.get(v).name()));
     }
 }
