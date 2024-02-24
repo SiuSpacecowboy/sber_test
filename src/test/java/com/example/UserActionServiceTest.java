@@ -1,11 +1,11 @@
 package com.example;
 
-import com.example.dao.Dao;
-import com.example.dao.UserDao;
-import com.example.dao.UserDaoForTests;
-import com.example.input.Input;
-import com.example.models.User;
-import com.example.user_actions.*;
+import com.example.not_web.dao.Dao;
+import com.example.not_web.dao.UserDao;
+import com.example.not_web.dao.UserDaoForTests;
+import com.example.not_web.input.Input;
+import com.example.not_web.models.User;
+import com.example.not_web.user_actions.*;
 import org.junit.Test;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.*;
@@ -19,7 +19,8 @@ public class UserActionServiceTest {
         UserActionService action = new CreateActionServiceImpl();
         when(input.askInt("Enter age: ")).thenReturn(20);
         when(input.askStr("Enter nickname: ")).thenReturn("Max");
-        when(input.askStr("Select your gender, F if female, M if male: ")).thenReturn("M");
+        when(input.askTwoSymb("F", "M",
+                "Select your gender, F if female, M if male: ")).thenReturn("M");
         boolean result = action.execute(input, dao);
         assertTrue(result);
         verify(dao, times(1)).save(any(User.class));

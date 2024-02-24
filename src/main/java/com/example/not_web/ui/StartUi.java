@@ -1,8 +1,8 @@
-package com.example.ui;
+package com.example.not_web.ui;
 
-import com.example.dao.Dao;
-import com.example.input.Input;
-import com.example.user_actions.UserActionService;
+import com.example.not_web.dao.Dao;
+import com.example.not_web.input.Input;
+import com.example.not_web.user_actions.UserActionService;
 import java.util.List;
 import java.util.stream.IntStream;
 

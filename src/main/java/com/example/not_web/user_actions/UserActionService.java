@@ -1,7 +1,7 @@
-package com.example.user_actions;
+package com.example.not_web.user_actions;
 
-import com.example.dao.Dao;
-import com.example.input.Input;
+import com.example.not_web.dao.Dao;
+import com.example.not_web.input.Input;
 
 /**
  Интерфейс для создания объектов действий пользователя.

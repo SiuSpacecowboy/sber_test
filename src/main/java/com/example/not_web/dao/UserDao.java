@@ -1,6 +1,7 @@
-package com.example.dao;
+package com.example.not_web.dao;
 
-import com.example.models.User;
+import com.example.not_web.models.User;
+
 import java.util.ArrayList;
 import java.util.List;
 

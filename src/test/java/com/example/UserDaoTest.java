@@ -1,8 +1,8 @@
 package com.example;
 
-import com.example.dao.Dao;
-import com.example.dao.UserDaoForTests;
-import com.example.models.User;
+import com.example.not_web.dao.Dao;
+import com.example.not_web.dao.UserDaoForTests;
+import com.example.not_web.models.User;
 import org.junit.Test;
 import java.util.List;
 import static org.junit.Assert.*;
