@@ -1,4 +1,4 @@
-package com.example.not_web.input;
+package com.example.not_web_app.input;
 
 import java.util.Scanner;
 

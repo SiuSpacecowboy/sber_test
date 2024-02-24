@@ -1,10 +1,10 @@
-package com.example.not_web;
+package com.example.not_web_app;
 
-import com.example.not_web.dao.Dao;
-import com.example.not_web.dao.UserDao;
-import com.example.not_web.input.Input;
-import com.example.not_web.ui.StartUi;
-import com.example.not_web.user_actions.*;
+import com.example.not_web_app.dao.Dao;
+import com.example.not_web_app.dao.UserDao;
+import com.example.not_web_app.input.Input;
+import com.example.not_web_app.ui.StartUi;
+import com.example.not_web_app.user_actions.*;
 
 import java.util.List;
 

@@ -1,8 +1,8 @@
-package com.example.not_web.user_actions;
+package com.example.not_web_app.user_actions;
 
-import com.example.not_web.dao.Dao;
-import com.example.not_web.input.Input;
-import com.example.not_web.models.User;
+import com.example.not_web_app.dao.Dao;
+import com.example.not_web_app.input.Input;
+import com.example.not_web_app.models.User;
 
 /** Класс, отвечающий за действие создания нового пользователя. */
 public class CreateActionServiceImpl implements UserActionService {

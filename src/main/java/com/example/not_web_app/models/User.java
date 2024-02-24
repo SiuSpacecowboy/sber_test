@@ -1,4 +1,4 @@
-package com.example.not_web.models;
+package com.example.not_web_app.models;
 
 import lombok.*;
 

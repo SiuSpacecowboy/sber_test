@@ -1,11 +1,11 @@
 package com.example;
 
-import com.example.not_web.dao.Dao;
-import com.example.not_web.dao.UserDao;
-import com.example.not_web.dao.UserDaoForTests;
-import com.example.not_web.input.Input;
-import com.example.not_web.models.User;
-import com.example.not_web.user_actions.*;
+import com.example.not_web_app.dao.Dao;
+import com.example.not_web_app.dao.UserDao;
+import com.example.not_web_app.dao.UserDaoForTests;
+import com.example.not_web_app.input.Input;
+import com.example.not_web_app.models.User;
+import com.example.not_web_app.user_actions.*;
 import org.junit.Test;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.*;
